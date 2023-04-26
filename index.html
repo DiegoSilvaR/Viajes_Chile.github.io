@@ -33,7 +33,84 @@
 
 <body>
   <a id="inicio">
+    <!--BARRA DE NAVEGACION========================================================================================-->
+    <nav class="navbar navbar-dark navbar-expand-lg bg-opacity-0 shadow shadow-sm sticky-top">
+      <div class="col-lg-11 justify-content-center ms-0 me-0 container-fluid">
+        <a id="viaje" class=" col-12 col-lg-3 navbar-brand text-center" href="#contactos"><img
+            src='assets/img/viajes.svg' style='width: 45px;' /> Viajes Chile</a>
+        <button class="col-12 navbar-toggler border-0 pulse glow-on-hover" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="col-12 col-lg-9 justify-content-end collapse navbar-collapse " id="navbarNavAltMarkup">
+          <div class="navbar-nav text-center">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            <a class="nav-link d-none d-lg-flex" href="#quienessomos">Quienes Somos</a>
+            <a class="nav-link" href="#destacados">Destacados</a>
+            <a class="nav-link" href="#contactos">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--===========================================================================================================-->
 
+    <!--CARRUSEL RESPONSIVO SLIDE AUTOMATICO=======================================================================-->
+    <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="5000">
+          <img src="assets/img/carousel1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="assets/img/carousel2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="assets/img/carousel3.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next bg-opacity-0" type="button" data-bs-target="#carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!--==============================================================================================================-->
+
+
+    <!--SCRIPTS JS PERSONAL=====================================================================================-->
+    <script src="assets/js/script.js"></script>
+    <!--========================================================================================================-->
+    
+    <!--SCRIPTS JQUERY==========================================================================================-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <!--========================================================================================================-->
+
+    <!--=============OCULTAR TEXTO EN SECTION QUIENES SOMOS=========================//-->
+    <script>
+    $(document).ready(function () {
+        $("#viajes").click(function () {
+          $('#texto1').toggle("swing");
+        });
+        $("#lugar").click(function () {
+          $('#texto2').toggle("swing");
+        });
+        $("#mapas").click(function () {
+          $('#texto3').toggle("swing");
+        });
+      });
+      //==========================================================================//
+    
+    //==============ANIMAR ICONOS REDES SOCIALES HOVER===========================//
+      $('.fa-up').hover(function () {
+        $(this).addClass('fa-bounce');
+      }, function () {
+        $(this).removeClass('fa-bounce');
+      });
+      //==========================================================================//
+  </script>
 
 
 
